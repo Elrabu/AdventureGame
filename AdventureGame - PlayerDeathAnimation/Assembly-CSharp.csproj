@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{BBEA8AE1-8364-FA3E-EB35-DF0222A39D45}</ProjectGuid>
+    <ProjectGuid>{5FD40BA5-31B3-F7F3-D00A-A0E4B72ABFE1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -71,13 +71,14 @@
     <Compile Include="Assets\PlayerController.cs" />
     <Compile Include="Assets\TriggerTest.cs" />
     <Compile Include="Assets\Loader.cs" />
+    <Compile Include="Assets\disappear.cs" />
     <Compile Include="Assets\DamagePopup.cs" />
     <Compile Include="Assets\destroy.cs" />
     <Compile Include="Assets\EnemyHealthBar.cs" />
     <Compile Include="Assets\CinemachineShake.cs" />
     <Compile Include="Assets\RandomSpawner.cs" />
     <Compile Include="Assets\Prefabs\LevelManager.cs" />
-    <Compile Include="Assets\disappear.cs" />
+    <Compile Include="Assets\TimeController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -772,7 +773,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{2FA66D9D-9E91-8E96-09B1-C42551D40AC2}</Project>
+      <Project>{0C654315-39A4-DDAD-A473-F6D53E00E97F}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>

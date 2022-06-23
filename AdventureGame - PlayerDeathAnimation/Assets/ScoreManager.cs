@@ -43,8 +43,7 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = score.ToString() + " POINTS";
         highscoreText.text = "HIGHSCORE: " + highscore.ToString();
 
-        
-        
+        TimeController.instance.BeginTimer();
 
     }
 
@@ -59,7 +58,8 @@ public class ScoreManager : MonoBehaviour
                 Loader.Load(Loader.Scene.Level2);
             }
         }
-       
+        
+        
     }
 
     public void addEnemy()
@@ -91,4 +91,6 @@ public class ScoreManager : MonoBehaviour
         }
         
     }
+
+    
 }

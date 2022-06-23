@@ -25,7 +25,6 @@ public class RandomSpawner : MonoBehaviour
         // Instantiate(enemyPrefabs[0], new Vector3(randSpawnPoint2, 7, 0), Quaternion.identity);
         // Instantiate(enemyPrefabs[1], new Vector3(randSpawnPoint3, 10, 0), Quaternion.identity);
         
-
     }
 
     // Update is called once per frame
@@ -34,17 +33,21 @@ public class RandomSpawner : MonoBehaviour
        if(cooldown == false)
         {
             cooldown = true;
-            StartCoroutine(Cooldown());
+            
             if(ScoreManager.instance.getscore() <= 9)
             {
+                
+                StartCoroutine(Cooldown());
+                
                 int randSpawnPoint2 = Random.Range(-60, -30);
                 int randSpawnPoint3 = Random.Range(-60, -30);
                 int randomMonster = Random.Range(0, 2);
                 Instantiate(enemyPrefabs[randomMonster], new Vector3(randSpawnPoint2, 7, 0), Quaternion.identity);
                 ScoreManager.instance.addEnemy();
                // Instantiate(enemyPrefabs[1], new Vector3(randSpawnPoint3, 10, 0), Quaternion.identity);
-               // ScoreManager.instance.addEnemy();
+               
                 Debug.Log("Enemys spawned");
+                
             }
             
         }
@@ -66,6 +69,7 @@ public class RandomSpawner : MonoBehaviour
    IEnumerator Cooldown()
     {
         yield return new WaitForSeconds(10);
+        TimeController.instance.BeginTimer();
         cooldown = false;
        // Debug.Log(Random.Range(0, 2));
        // Debug.Log(ScoreManager.instance.getscore()); 
